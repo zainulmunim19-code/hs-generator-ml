@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HS Generator ML - Zain Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-crown logo-icon"></i>
+                    <div class="logo-text">HS GENERATOR ML</div>
+                    <div class="version-badge">Zain Developer</div>
+                </div>
+                <div class="nav-links">
+                    <a href="https://github.com" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">HS GENERATOR MOBILE LEGENDS</h1>
+            <p class="hero-subtitle">Upload screenshot hero/HS ML Anda, dan dapatkan hasil visual showcase yang HD, tajam, dan siap di-download. Tampilkan statistik hero Anda dengan gaya profesional.</p>
+        </div>
+    </section>
+
+    <!-- Main Dashboard -->
+    <main class="container">
+        <div class="dashboard">
+            <!-- Upload Section -->
+            <section class="glass-card upload-section">
+                <h2 class="card-title"><i class="fas fa-upload"></i> Upload Screenshot</h2>
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Drop file di sini atau klik untuk upload</h3>
+                    <p>Format yang didukung: JPG, PNG, WebP (Max 5MB)</p>
+                    <button class="upload-btn" id="uploadBtn">
+                        <i class="fas fa-folder-open"></i> Pilih File
+                    </button>
+                    <input type="file" id="fileInput" accept="image/*">
+                    <div class="file-info" id="fileInfo">Belum ada file dipilih</div>
+                </div>
+                
+                <div class="preview-container">
+                    <div class="placeholder-image" id="placeholderImage">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <img id="imagePreview" class="image-preview" alt="Preview">
+                </div>
+                
+                <div class="controls">
+                    <button class="btn btn-primary" id="generateBtn" disabled>
+                        <i class="fas fa-magic"></i> Generate HS
+                    </button>
+                    <button class="btn btn-secondary" id="resetBtn" disabled>
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+                
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Memproses screenshot Anda...</p>
+                    <p class="loading-subtext">Ini mungkin memakan waktu beberapa detik</p>
+                </div>
+            </section>
+
+            <!-- Result Section -->
+            <section class="glass-card result-section" id="resultSection">
+                <h2 class="card-title"><i class="fas fa-star"></i> Hasil HS Showcase</h2>
+                <div class="result-image-container">
+                    <div class="hs-badge">HS SHOWCASE</div>
+                    <img id="resultImage" class="result-image" alt="HS Result">
+                </div>
+                <div class="controls">
+                    <button class="btn btn-primary" id="downloadBtn">
+                        <i class="fas fa-download"></i> Download HD
+                    </button>
+                    <button class="btn btn-secondary" id="newUploadBtn">
+                        <i class="fas fa-plus-circle"></i> Upload Baru
+                    </button>
+                </div>
+                <p class="result-info">
+                    <i class="fas fa-info-circle"></i> Gambar dioptimasi dengan kualitas HD dan tajam.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="branding">Dikembangkan oleh <span>Zain Developer</span></div>
+            <div class="copyright">© 2023 HS Generator Mobile Legends. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
